@@ -6,13 +6,28 @@
 <h1>Computational Models of Higher Categories</h1>
 <h2><a href="https://www.cs.bham.ac.uk/~mhe/events/MGS23/">Midland Graduate School 2023</a></h2>
 <h3>Overview</h3>
-<p>Directed higher category theory is a powerful and expressive area of mathematics, with a range of applications across computer science and physics. Computational techniques give an excellent way to learn this subject in a hands-on way that avoids much of the complexity of traditional mathematical approaches.</p>
-<p>In this mini-course we will focus on two proof assistants, <a href="https://github.com/ericfinster/catt.io">Catt</a> and <a href="https://ncatlab.org/nlab/show/homotopy.io">homotopy.io</a>, which use very different techniques to allow us to define and compose cells in finitely-generated <i>n</i>-categories.</p>
+<p>Directed higher category theory is a powerful and expressive area of mathematics, with a range of applications across computer science and physics. Computational techniques give an excellent way to learn this subject in a hands-on way that avoids much of the complexity of traditional mathematical approaches. We take an elementary approach, in the sense that there are no formal prerequisites, and previous knowledge of higher category theory is not required to follow this course. However, experience with ordinary category theory and monoidal category theory would be helpful.</p>
+<p>In this mini-course we will focus on two proof assistants, <a href="https://github.com/ericfinster/catt.io">Catt</a> and <a href="https://ncatlab.org/nlab/show/homotopy.io">homotopy.io</a>, which use very different techniques to allow us to define and compose cells in finitely-generated <i>n</i>-categories. The proof assistant Catt allows us to write expressions in a type theory which encode composite operations, with composition governed by combinatorial objects called pasting schemes. In contrast, the proof assistant homotopy.io is based on the graphical calculus, with all composites defined by interacting with the mouse, and output rendered as images in 2d, 3d and 4d. The different perpsectives offered by these proof assistants give an excellent and robust understanding and intuition for higher category theory.</p>
 <h3>Proof assistants</h3>
-<ul>
-	<li>The Catt proof assistant: <a href="https://github.com/ericfinster/catt.io">github.com/ericfinster/catt.io</a></li>
-	<li>The homotopy.io proof assistant: <a href="https://beta.homotopy.io">beta.homotopy.io</a></li>
-</ul>
+<p><b>homotopy.io.</b> This proof assistant is available for access here: <a href="https://beta.homotopy.io">beta.homotopy.io</a>. It is immediately available over the web, and requires no setup. There is some support for touch interaction, and a laptop trackpad works ok, but a mouse makes it much easier to use.</p>
+<p><b>Catt.</b> This proof assistant is available for download here: <a href="https://github.com/ericfinster/catt.io">github.com/ericfinster/catt.io</a>. It requires some setup. Sometimes hiccups are encountered, so it is recommended to do this setup before the course starts. Here we provide setup instructions suitable for a Linux operating system (if you are using Windows, you could try installing <a href="https://learn.microsoft.com/en-us/windows/wsl/install">Windows Subsystem for Linux</a>.) Note we will be using the branch "freshbranch" branch which includes some useful features. The following sequence of commands works for us to install the proof assistant on a fresh Linux install:
+	<ol>
+		<li>git clone https://github.com/ericfinster/catt.io</li>
+		<li>cd catt.io</li>
+		<li>git checkout freshbranch</li>
+		<li>sudo apt update</li>
+		<li>sudo apt install opam</li>
+		<li>opam init <i>(say yes to questions)</i></li>
+		<li>opam install menhir</li>
+		<li>opam install sedlex</li>
+		<li>opam install fmt</li>
+		<li>opam install base</li>
+		<li>sudo apt install ocaml-dune</li>
+		<li>eval $(opam env)</li>
+		<li>dune build</li>
+		<li>cp _build/default/catt.exe .</li>
+	</ol>
+</p>
 <h3>Course materials</h3>
 <p>The course notes will be available for download soon.</p>
 </body>
